@@ -8,6 +8,5 @@ export default styled.div`
     justify-content: center;
     max-width: 75%;
     text-align: center;
-    margin-left: 12%
-   
+    margin-left: 12%   
 `
