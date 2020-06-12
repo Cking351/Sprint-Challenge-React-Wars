@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Characters from './components/Character'
+import axios from 'axios'
 
 const App = () => {
+
+  const [pickleRick, setPickleRick] =useState([])
+
+  useEffect(() => {
+    axios.get('https://rickandmortyapi.com/api/character')
+    .then(response => {
+      setPickleRick(response.data.results)
+    })
+    .catch(error => {
+      console.log('Needed schezwan sauce. Oops')
+    })
+  }, [])
+
+
+
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
