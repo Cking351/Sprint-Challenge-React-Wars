@@ -9,10 +9,10 @@ const Character = props => {
     return (
         <CardStyle>
                 <img src={props.cards.image} />
-                <h1>{props.cards.name}</h1>
-                <h3>Status: {props.cards.status}</h3>
-                <h3>Gender: {props.cards.gender}</h3>
-                <h3>Species: {props.cards.species}</h3>
+                <h2>{props.cards.name}</h2>
+                <h4>Status: {props.cards.status}</h4>
+                <h4>Gender: {props.cards.gender}</h4>
+                <h4>Species: {props.cards.species}</h4>
         </CardStyle>    
     )   
 }

@@ -9,5 +9,5 @@ export default styled.div`
     max-width: 75%;
     text-align: center;
     margin-left: 12%
-    
+   
 `
