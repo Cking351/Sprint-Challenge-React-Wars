@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './App.css'
 import Character from './components/Character'
 import axios from 'axios'
+import JumboStyle from './components/JumboStyle'
 
 const App = () => {
 
@@ -25,11 +26,11 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <div>
+      <JumboStyle>
         {pickleRick.map((item) => (
           <Character cards={item} />
         ))}
-      </div>
+      </JumboStyle>
     </div>
   );
 }
