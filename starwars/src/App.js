@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import Characters from './components/Character'
+import React, { useState, useEffect } from 'react'
+import './App.css'
+import Character from './components/Character'
 import axios from 'axios'
 
 const App = () => {
@@ -8,14 +8,10 @@ const App = () => {
   const [pickleRick, setPickleRick] =useState([])
 
   useEffect(() => {
-    axios.get('https://rickandmortyapi.com/api/character')
-    .then(response => {
-      setPickleRick(response.data.results)
-    })
-    .catch(error => {
-      console.log('Needed schezwan sauce. Oops')
-    })
-  }, [])
+    axios.get(`https://rickandmortyapi.com/api/character`)
+    .then(response => setPickleRick(response.data.results))
+    .catch(error => console.log('Error'))
+  }, )
 
 
 
@@ -29,6 +25,11 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <div>
+        {pickleRick.map((item) => (
+          <Character cards={item} />
+        ))}
+      </div>
     </div>
   );
 }
